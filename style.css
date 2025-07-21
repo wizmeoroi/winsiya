@@ -1,0 +1,226 @@
+
+/* إعدادات عامة */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0a1a2f;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* رأس الصفحة */
+header {
+  background-color: #081626;
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+header h1 {
+  font-size: 48px;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+header p {
+  font-size: 20px;
+  color: #c0c0c0;
+  margin-top: 5px;
+}
+
+/* شريط التنقل */
+nav {
+  background-color: #06111e;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #00d9ff;
+}
+
+/* قسم المعرض */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.gallery img {
+  width: 220px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  transition: transform 0.5s ease, box-shadow 0.5s ease, filter 0.4s ease;
+  animation: fadeIn 1s ease forwards;
+  cursor: pointer;
+}
+
+.gallery img:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 15px 40px rgba(255, 255, 255, 0.4);
+  filter: brightness(1.15);
+}
+
+.gallery img:active {
+  transform: scale(0.98) translateY(2px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
+}
+
+video {
+  max-width: 100%;
+  width: 400px; /* 👈 غيّر الرقم حسب اللي يناسبك */
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  margin: 20px auto;
+  display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* انيميشن الدخول */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* قسم الطلب */
+.request-section {
+  background-color: #10263d;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.request-section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+form {
+  max-width: 600px;
+  margin: auto;
+}
+
+form input,
+form textarea,
+form button {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+}
+
+form input,
+form textarea {
+  background-color: #1c324d;
+  color: white;
+}
+
+form button {
+  background-color: #00d9ff;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #00aacc;
+}
+
+/* تذييل الموقع */
+footer {
+  background-color: #06111e;
+  color: #999;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+/* وسائل التواصل */
+.social {
+  margin-top: 10px;
+}
+
+.social a {
+  margin: 0 10px;
+  color: #00d9ff;
+  font-size: 18px;
+  transition: transform 0.3s;
+}
+
+.social a:hover {
+  transform: scale(1.3);
+}
+
+/* تجاوب الهاتف */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 32px;
+  }
+
+  .gallery img {
+    width: 90%;
+    height: auto;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  nav a {
+    margin: 8px 0;
+  }
+}
